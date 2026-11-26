@@ -5,7 +5,7 @@ const desc=['Create polished, role-ready CVs in minutes.','Write on-brand captio
 const creators=['Aarav Mehta','Riya Sharma','Aditya Kapoor','Neha Verma','Rahul Nair','Priya Iyer','Arjun Malhotra','Sneha Rao','Karan Shah','Ananya Das','Ishaan Kulkarni','Meera Joshi','Dev Patel','Zara Khan','Kabir Sethi','Nisha Menon','Vihaan Reddy','Tara Mukherjee','Rehan Qureshi','Aditi Bansal','Maya Chen','Ethan Brooks','Sofia Alvarez','Noah Williams','Amara Okafor','Lucas Martin','Elena Petrova','Oliver Scott','Aisha Rahman','Daniel Kim','Isabella Costa','Rohan Desai','Kiara Fernandes','Samir Bose','Leila Haddad'];
 export const products:Product[]=names.map((name,i)=>({id:`SKU-${String(i+1).padStart(3,'0')}`,name,category:cats[i],description:desc[i%desc.length],revenue: i<29?82000+(i*791)%60000:0,status:i%7===0?'In review':'Active',creator:creators[i%creators.length],growth:4+(i*13)%34,icon:['✳','◈','⌘','◉','▷','✉','✦','↗','◎','⌬'][i%10]}));
 // Normalize the catalog to the exact demonstration target.
-export const ecosystemTarget=2100000;
+export const ecosystemTarget=2132926;
 const rawTotal=products.reduce((s,p)=>s+p.revenue,0); products.forEach(p=>p.revenue=Math.floor(p.revenue*ecosystemTarget/rawTotal)); products[0].revenue+=ecosystemTarget-products.reduce((s,p)=>s+p.revenue,0);
 export const totalRevenue=products.reduce((s,p)=>s+p.revenue,0);
 const creatorRevenue=[165000,178000,192000,205000,219000,231000,245000,258000,272000,286000,299000,315000,328000,342000,356000,369000,383000,397000,411000,425000,439000,453000,468000,482000,496000,510000,524000,538000,552000,566000,581000,595000,609000,623000,638000];
